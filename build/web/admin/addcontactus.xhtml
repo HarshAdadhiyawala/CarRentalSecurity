@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Add Contact Us</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="AdminLayout.xhtml">
+            <ui:define name="content">
+                <div class="container-fluid">
+                                    <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="float-end">
+                                <ol class="breadcrumb">
+                                    <li class=""><a href="#"></a></li>
+                                    <li class=""><a href="#"></a></li>
+                                    <li class=""></li>
+                                </ol>
+                            </div>
+                       
+                        </div>
+                        <!--end page-title-box-->
+                    </div>
+                    <!--end col-->
+                </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title" style="font-size: 20px;">Give Answer</h4>
+                            </div><!--end card-header-->
+                            <div class="card-body">                                    
+                                <div class="general-label">
+                                    <h:form>
+                                        <h:inputHidden id="contactusid" value="#{contactusJSFManagedBean.contactusid}"></h:inputHidden>
+                                        <h:inputHidden id="email" value="#{contactusJSFManagedBean.email}"></h:inputHidden>
+                                        <h:inputHidden id="name" value="#{contactusJSFManagedBean.name}"></h:inputHidden>
+                                        <h:inputHidden id="contactno" value="#{contactusJSFManagedBean.contactno}"></h:inputHidden>
+                                        <h:inputHidden id="subject" value="#{contactusJSFManagedBean.subject}"></h:inputHidden>
+                                        <h:inputHidden id="contactmessage" value="#{contactusJSFManagedBean.contactmessage}"></h:inputHidden>
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Message</label>
+                                            <div class="col-sm-10">
+                                                <h:inputText class="form-control" id="contactusmessage" value="#{contactusJSFManagedBean.contactmessage}" disabled="true"></h:inputText>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Answer</label>
+                                            <div class="col-sm-10">
+                                                <h:inputTextarea class="form-control" id="contactusanswer" value="#{contactusJSFManagedBean.contactusanswer}" required="true" requiredMessage="Please Enter Capacity"></h:inputTextarea>
+                                                <h:message for="capacity" style="color:red"></h:message>
+                                            </div>
+                                        </div>                                        
+                                        <div class="row">
+                                            <div class="col-sm-10 ms-auto">
+                                                <h:commandButton type="submit" class="btn btn-primary" value="Submit" action="#{contactusJSFManagedBean.givecontactusanswer(contactusJSFManagedBean.subject,contactusJSFManagedBean.contactmessage,contactusJSFManagedBean.email,contactusJSFManagedBean.contactusanswer)}"></h:commandButton>
+                                                <input type="reset" value="Reset" class="btn btn-dark"></input>
+                                            </div>
+                                        </div> 
+                                        
+                                    </h:form>           
+                                </div>
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div><!--end col--> 
+                    <div class="col-2"></div>
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

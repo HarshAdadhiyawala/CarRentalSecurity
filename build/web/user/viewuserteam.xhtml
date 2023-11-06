@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>View Team</title>
+    </h:head>
+    <h:body>
+          <ui:composition template="UserLayout.xhtml">
+              <ui:define name="content">
+                  
+<!-- ================================
+    START BREADCRUMB AREA
+================================= -->
+<section class="breadcrumb-area bread-bg-11">
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="breadcrumb-content">
+                        <div class="section-heading">
+                            <h2 class="sec__title text-white">Team</h2>
+                        </div>
+                    </div><!-- end breadcrumb-content -->
+                </div><!-- end col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="breadcrumb-list text-right">
+                        <ul class="list-items">
+                            <li><a href="viewuserhome.xhtml">Home</a></li>
+
+                            <li>Team</li>
+                        </ul>
+                    </div><!-- end breadcrumb-list -->
+                </div><!-- end col-lg-6 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end breadcrumb-wrap -->
+   
+</section><!-- end breadcrumb-area -->
+<!-- ================================
+    END BREADCRUMB AREA
+================================= -->
+
+<!-- ================================
+    START INFO AREA
+================================= -->
+<section class="info-area padding-top-100px padding-bottom-60px text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2 class="sec__title">Our Dedicated Team</h2>
+                </div><!-- end section-heading -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+        <div class="row padding-top-100px">
+            <c:forEach items="#{teamJSFManagedBean.showteam()}" var="t">
+                    <div class="col-lg-4 responsive-column">
+                        <div class="card-item team-card">
+                            <div class="card-img">
+                                 <h:graphicImage value="/upload/#{t.image}"></h:graphicImage>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="#{teamJSFManagedBean.detailteam(t.teamid)}" class="d-block">#{t.name}</a>
+                                </h3>
+                                <p class="card-meta">#{t.post}</p>
+                                <p class="card-text font-size-15 pt-2">
+                                   #{t.descriptioon}
+                                </p>
+                               
+                            </div>
+                        </div><!-- end card-item -->
+                    </div><!-- end col-lg-4 -->
+             </c:forEach>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end info-area -->
+        <!-- ================================
+            END INFO AREA
+        ================================= -->
+
+            </ui:define>
+          </ui:composition>
+    </h:body>
+</html>
+

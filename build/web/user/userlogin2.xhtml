@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>User Login</title>
+    </h:head>
+    <h:body>
+            <ui:composition template="UserLayout.xhtml">
+            <ui:define name="content">
+         
+ 
+    <section class="contact-area padding-top-100px padding-bottom-70px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mx-auto">
+                    <div class="form-box login-left">
+
+                    </div>
+                </div>
+                <div class="col-lg-7 mx-auto">
+                    <div class="form-box">
+                        <div class="form-title-wrap">
+                            <p class="text-danger">
+                                
+                            </p>
+
+                            <h2 class="">Login Here</h2>
+                            
+                            <br />
+                            <p class="font-size-15 pt-2">
+                                Don't have an account yet ?
+                                <a href="userregistration.jsf" class="text-color">Register Here</a>
+                            </p>
+                        </div>
+                        <div class="form-content ">
+                            <div class="contact-form-action">
+                                <h:form>
+                                    <div class="input-box">
+                                        <label class="label-text">Enter Email</label>
+                                        <div class="form-group">
+                                            <span class="la la-envelope-o form-icon"></span>
+                                            <h:inputText class="form-control" id="uemail" value="#{customerJSFManagedBean.uemail}" required="true" requiredMessage="Please Enter Email" validatorMessage="Please Enter valid Email Format">
+                                                    <f:validateRegex for="uemail" pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="uemail" style="color:red"></h:message>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="input-box">
+                                        <label class="label-text">Enter Password</label>
+                                        <div class="form-group">
+                                            <span class="la la-lock form-icon"></span>
+                                                <h:inputSecret class="form-control" id="upassword" value="#{customerJSFManagedBean.upassword}" required="true" requiredMessage="Please Enter Password"></h:inputSecret>
+                                                <h:message for="upassword" style="color:red"></h:message>                                            
+                                        </div>
+                                    </div>
+                                    <div>
+
+<h:messages globalOnly="true"  style="color: red;"></h:messages>
+                                    </div>
+                                    <div class="btn-box">
+
+<h:commandButton type="submit" class="theme-btn" value="Login" action="#{customerJSFManagedBean.checkuserlogin2()}"></h:commandButton>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <p class="forgot-password">
+                                            <a href="userforgotpassword.xhtml">Lost Your Password?</a>
+                                        </p>
+                                    </div>
+                                </h:form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                
+                
+ 
+            </ui:define>
+         </ui:composition>
+    </h:body>
+</html>
+

@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+           <ui:composition template="AdminLayout.xhtml">
+            <ui:define name="content">
+                <div class="container-fluid">
+                                    <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="float-end">
+                                <ol class="breadcrumb">
+                                    <li class=""><a href="#"></a></li>
+                                    <li class=""><a href="#"></a></li>
+                                    <li class=""></li>
+                                </ol>
+                            </div>
+                             
+                        </div>
+                        <!--end page-title-box-->
+                    </div>
+                    <!--end col-->
+                </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title" style="font-size: 20px;">Edit Cars</h4>
+                            </div><!--end card-header-->
+                            <div class="card-body">                                    
+                                <div class="general-label">
+                                    <h:form enctype="multipart/form-data">
+   <div class="mb-3 row">
+                                           
+                                            <div class="col-sm-10">
+                                                <h:inputHidden class="form-control" id="id" value="#{carsJSFManagedBean.id}">
+                                                
+                                                </h:inputHidden>>
+                                          
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Model Name</label>
+                                            <div class="col-sm-10">
+                                                <h:inputText class="form-control" id="mname" value="#{carsJSFManagedBean.mname}" required="true" requiredMessage="Please Enter Name" validatorMessage="Name contains only aplhabets">
+                                                <f:validateRequired></f:validateRequired>
+                                                <f:validateRegex pattern="(^[A-Za-z0-9 ]{2,50}$)"></f:validateRegex>    
+                                                </h:inputText>
+ 
+                                                <h:message for="mname" style="color:red"></h:message>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Type</label>
+                                            <div class="col-sm-10">
+                                                <h:selectOneRadio id="type" class="form-control" value="#{carsJSFManagedBean.type}" validatorMessage="Please Select Gender">
+                                                    <f:selectItem itemValue="Petrol" itemLabel="&nbsp;&nbsp;Petrol&nbsp;&nbsp;&nbsp;"></f:selectItem>
+                                                    <f:selectItem itemValue="Diesel" itemLabel="&nbsp;&nbsp;Diesel&nbsp;&nbsp;&nbsp;"></f:selectItem>
+                                                    <f:selectItem itemValue="ECars" itemLabel="&nbsp;&nbsp;ECars&nbsp;&nbsp;&nbsp;"></f:selectItem>
+                                                    
+                                                    <f:validateRequired></f:validateRequired>
+                                                </h:selectOneRadio>
+                                                <h:message for="type" style="color:red"></h:message>
+                                            </div>
+                                        </div> 
+                                        
+                                        
+                                           <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Car Type</label>
+                                            <div class="col-sm-10">
+                                                <h:selectOneMenu value="#{carsJSFManagedBean.cartypeid}" class="form-select">
+                                                    <f:selectItems value="#{carTypeJSFManagedBean.showcartype()}" var="c" itemLabel="#{c.typename}" itemValue="#{c.id}"></f:selectItems>
+                                                </h:selectOneMenu>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                         <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Mode</label>
+                                            <div class="col-sm-10">
+                                                <h:selectOneRadio id="mode" class="form-control" value="#{carsJSFManagedBean.drivemode}" validatorMessage="Please Select Gender">
+                                                    <f:selectItem itemValue="Automatic" itemLabel="&nbsp;&nbsp;Automatic&nbsp;&nbsp;&nbsp;"></f:selectItem>
+                                                    <f:selectItem itemValue="Manual" itemLabel="&nbsp;&nbsp;Manual&nbsp;&nbsp;&nbsp;"></f:selectItem>
+                                                  
+                                                    <f:validateRequired></f:validateRequired>
+                                                </h:selectOneRadio>
+                                                <h:message for="mode" style="color:red"></h:message>
+                                            </div>
+                                        </div> 
+                                        
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Passenger Capacity</label>
+                                            <div class="col-sm-10">
+                                                <h:inputText class="form-control" id="pcapacity" value="#{carsJSFManagedBean.pcapacity}" required="true" requiredMessage="Please Enter Passenger Capacity"></h:inputText>
+                                                <h:message for="pcapacity" style="color:red"></h:message>
+                                            </div>
+                                        </div> 
+                                  
+                                            <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Luggage Capacity</label>
+                                            <div class="col-sm-10">
+                                                <h:inputText class="form-control" id="lcapacity" value="#{carsJSFManagedBean.lcapacity}" required="true" requiredMessage="Please Enter Passenger Capacity"></h:inputText>
+                                                <h:message for="lcapacity" style="color:red"></h:message>
+                                            </div>
+                                        </div> 
+                                      
+                                        
+                                         <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">City</label>
+                                            <div class="col-sm-10">
+                                                <h:selectOneMenu value="#{carsJSFManagedBean.cityid}" class="form-select">
+                                                    <f:selectItems value="#{cityJSFManagedBean.showcity()}" var="c" itemLabel="#{c.cityname}" itemValue="#{c.id}"></f:selectItems>
+                                                </h:selectOneMenu>
+                                            </div>
+                                        </div>
+                                        
+               <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Image</label>
+                                            <div class="col-sm-10">
+<!--                                                -->
+<p:fileUpload id="fnameteam" fileUploadListener="#{carsJSFManagedBean.handleFileUpload}" class="form-control" mode="advanced" update="messages" allowTypes="/(\.|\/)(png|jpg|jpeg|PNG|JPEG|JPG|)$/" /> <!--required="true" requiredMessage="Please Select Image"-->
+                                                <p:growl id="messages" showDetail="true" life="-1000" globalOnly="true"/>
+                                                <h:message for="fname" style="color:red"></h:message>
+                                                <h:outputLabel id="errmsg" value="#{carsJSFManagedBean.errmsg}" style="color:red"></h:outputLabel>
+                                            </div>
+                                        </div>   
+                                                                                                          
+                                        <div class="row">
+                                            <div class="col-sm-10 ms-auto">
+                                                <h:commandButton type="submit" class="btn btn-primary" value="Submit" action="#{carsJSFManagedBean.updatecars()}"></h:commandButton>
+                                                <input type="reset" value="Reset" class="btn btn-dark"></input>
+                                            </div>
+                                        </div> 
+                                        
+                                    </h:form>           
+                                </div>
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div><!--end col--> 
+                    <div class="col-2"></div>
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>   
+    </h:body>
+</html>
+

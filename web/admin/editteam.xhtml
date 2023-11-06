@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Edit Staff</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="AdminLayout.xhtml">
+            <ui:define name="content">
+                <div class="container-fluid">
+                                    <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="float-end">
+                                <ol class="breadcrumb">
+                                    <li class=""><a href="#"></a></li>
+                                    <li class=""><a href="#"></a></li>
+                                    <li class=""></li>
+                                </ol>
+                            </div>
+                            
+                        </div>
+                        <!--end page-title-box-->
+                    </div>
+                    <!--end col-->
+                </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title" style="font-size: 20px;">Edit Staff</h4>
+                            </div><!--end card-header-->
+                            <div class="card-body">                                    
+                                <div class="general-label">
+                                    <h:form>
+                                                                              
+                                        <h:inputHidden id="teamid" value="#{teamJSFManagedBean.teamid}"></h:inputHidden>
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Person Name</label>
+                                            <div class="col-sm-10">
+                                                <h:inputText class="form-control" id="tmname" value="#{teamJSFManagedBean.tmname}" required="true" requiredMessage="Please Enter Name" validatorMessage="Name contains only aplhabets">
+                                                <f:validateRequired></f:validateRequired>
+                                                <f:validateRegex pattern="(^[A-Za-z]{2,50}$)"></f:validateRegex>    
+                                                </h:inputText>
+<!--                                                <small><h:message for="tmname" style="color:red"></h:message>
+                                                    </small>-->
+                                                <h:message for="tmname" style="color:red"></h:message>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Gender</label>
+                                            <div class="col-sm-10">
+                                                <h:selectOneRadio id="tmgender" value="#{teamJSFManagedBean.tmgender}" validatorMessage="Please Select Gender">
+                                                    <f:selectItem itemValue="male" itemLabel="Male"></f:selectItem>
+                                                    <f:selectItem itemValue="female" itemLabel="Female"></f:selectItem>
+                                                    <f:validateRequired></f:validateRequired>
+                                                </h:selectOneRadio>
+                                                <h:message for="tmgender" style="color:red"></h:message>
+                                            </div>
+                                        </div>                                        
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Designation</label>
+                                            <div class="col-sm-10">
+                                                <h:inputText class="form-control" id="tmpost" value="#{teamJSFManagedBean.tmpost}" required="true" requiredMessage="Please Enter Post"></h:inputText>
+                                                <h:message for="tmpost" style="color:red"></h:message>
+                                            </div>
+                                        </div> 
+                                          <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Image</label>
+                                            <div class="col-sm-10">
+                                                <h:graphicImage value="/upload/#{teamJSFManagedBean.fname}" height="100" width="100"></h:graphicImage>
+                                                <p:fileUpload id="fnameteam" fileUploadListener="#{teamJSFManagedBean.handleFileUpload}" class="form-control" mode="advanced" update="messages" allowTypes="/(\.|\/)(png|jpg|jpeg|PNG|JPEG|JPG|)$/" required="true" requiredMessage="Please Select Image"/>
+                                                <p:growl id="messages" showDetail="true" life="-1000" globalOnly="true"/>
+                                                <h:message for="fname" style="color:red"></h:message>
+                                                <h:outputLabel id="errmsg" value="#{teamJSFManagedBean.errmsg}" style="color:red"></h:outputLabel>
+                                            </div>
+                                        </div>   
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Description</label>
+                                            <div class="col-sm-10">
+<!--                                                <h:inputText class="form-control" id="tmdescriptioon" value="#{teamJSFManagedBean.tmdescriptioon}"></h:inputText>-->
+                                                <h:inputTextarea class="form-control" id="tmdescriptioon" value="#{teamJSFManagedBean.tmdescriptioon}" required="true" requiredMessage="Please Enter Description"></h:inputTextarea>
+                                                <h:message for="tmdescriptioon" style="color: red"></h:message>
+                                            </div>
+                                        </div>
+                                         <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">City</label>
+                                            <div class="col-sm-10">
+                                                <h:selectOneMenu value="#{teamJSFManagedBean.cityid}" class="form-select">
+                                                    <f:selectItems value="#{cityJSFManagedBean.showcity()}" var="c" itemLabel="#{c.cityname}" itemValue="#{c.id}"></f:selectItems>
+                                                </h:selectOneMenu>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Join Date</label>
+                                            <div class="col-sm-10">
+<!--                                                -->
+<p:calendar id="joindate" value="#{teamJSFManagedBean.joindate}" class="form-control" pattern="yyyy-MM-dd" required="true" requiredMessage="Please Select Join Date"></p:calendar>
+<h:message for="joindate" style="color:red"></h:message>
+                                            </div>
+                                        </div>  
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Contact no</label>
+                                            <div class="col-sm-10">
+                                                <h:inputText class="form-control" id="tmcontactno" value="#{teamJSFManagedBean.tmcontactno}" required="true" requiredMessage="Please Enter Contact Number" validatorMessage="Only Digits Allowed (10 Digits)">
+                                                    <f:validateRegex pattern="(^[0-9]{10}$)"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="tmcontactno" style="color:red"></h:message>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="horizontalInput1" class="col-sm-2 col-form-label">Email</label>
+                                            <div class="col-sm-10">
+                                                <h:inputText class="form-control" id="tmemaill" value="#{teamJSFManagedBean.tmemaill}" required="true" requiredMessage="Please Enter Email" validatorMessage="Please Enter valid Email Format">
+                                                    <f:validateRegex for="tmemaill" pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="tmemaill" style="color:red"></h:message>
+                                            </div>
+                                        </div>
+                                      
+                                                                           
+                                        <div class="row">
+                                            <div class="col-sm-10 ms-auto">
+                                                <h:commandButton type="submit" class="btn btn-primary" value="Edit" action="#{teamJSFManagedBean.updateteam()}"></h:commandButton>
+                                                <input type="reset" value="Reset" class="btn btn-dark"></input>
+                                            </div>
+                                        </div> 
+                                        
+                                    </h:form>           
+                                </div>
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div><!--end col--> 
+                    <div class="col-2"></div>
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>            
+    </h:body>
+</html>
+

@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>View Booking</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="UserLayout.xhtml">
+            <ui:define name="content">
+
+<section class="contact-area padding-top-100px padding-bottom-70px">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-7 mx-auto">
+                    <div class="form-box">
+                        <div class="form-title-wrap">
+                            
+                           
+                            
+                            <br />
+                            <p class="font-size-15 pt-2">
+                                <b> Booking Details</b>
+                                
+                            </p>
+                        </div>
+                        <div class="form-content ">
+                            <div class="contact-form-action">
+                                <h:form>
+                                    <div class="row">
+                                    <div class="input-box col-sm-6">
+                                        
+                                        <label class="label-text">FirstName</label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-user form-icon"></span>-->
+                                            <h:inputText class="form-control" id="fname" value="#{bookingJSFManagedBean.fname}" required="true" requiredMessage="Please Enter Email" validatorMessage="Please Enter valid Email Format">
+                                                     
+                                                </h:inputText>
+                                                <h:message for="fname" style="color:red"></h:message>
+                                            
+                                        </div>
+                                    </div>
+                                        
+                                    
+                                          <div class="input-box col-sm-6">
+                                        <label class="label-text">LastName</label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-user form-icon"></span>-->
+                                            <h:inputText class="form-control" id="lname" value="#{bookingJSFManagedBean.lname}" required="true" requiredMessage="Please Enter LastName" validatorMessage="Please Enter valid Email Format">
+                                                  
+                                                </h:inputText>
+                                                <h:message for="lname" style="color:red"></h:message>
+                                            
+                                        </div>
+                                          </div>
+                                    </div>
+                                        
+                                    <div class="row">
+                                         <div class="input-box col-sm-6">
+                                                                     <label class="label-text">Contact No1</label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-mobile-phone form-icon"></span>-->
+                                            <h:inputText class="form-control" id="cno1" value="#{bookingJSFManagedBean.CNo1}" required="true" requiredMessage="Please Enter ContactNo1" validatorMessage="Please Enter valid MobileNo">
+                                                    <f:validateRegex for="cno1" pattern="^[0-9]{10}$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="cno1" style="color:red"></h:message>
+                                            
+                                        </div>
+                                         </div>
+                                        
+                                         <div class="input-box col-sm-6">
+                                        <label class="label-text">Contact No2</label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-mobile-phone form-icon"></span>-->
+                                            <h:inputText class="form-control" id="cno2" value="#{bookingJSFManagedBean.CNo2}" required="true" requiredMessage="Please Enter ContactNo2" validatorMessage="Please Enter valid MobileNo">
+                                                    <f:validateRegex for="cno2" pattern="^[0-9]{10}$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="cno2" style="color:red"></h:message>
+                                            
+                                        </div>
+                                         </div>
+                                       </div>  
+                                          
+                                          <label class="label-text">Email </label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-mailchimp form-icon"></span>-->
+                                            <h:inputText class="form-control" id="email" value="#{bookingJSFManagedBean.email}" required="true" requiredMessage="Please Enter Email" validatorMessage="Please Enter valid Email">
+                                                    <f:validateRegex for="email" pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="email" style="color:red"></h:message>
+                                            
+                                        </div>
+                                          
+                                       
+                                       
+                                        <label class="label-text">Address1</label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-mail-reply form-icon"></span>-->
+                                            <h:inputText class="form-control" id="PAddress1" value="#{bookingJSFManagedBean.PAddress1}" required="true" requiredMessage="Please Enter Address" validatorMessage="Please Enter valid Address">
+                                                    <f:validateRegex for="PAddress1" pattern="^[a-zA-Z0-9 ,]+$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="PAddress1" style="color:red"></h:message>
+                                            
+                                        </div>
+                                        
+                                    
+                                        <label class="label-text">Address2 </label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-mail-reply form-icon"></span>-->
+                                            <h:inputText class="form-control" id="PAddress2" value="#{bookingJSFManagedBean.PAddress2}" required="true" requiredMessage="Please Enter Address" validatorMessage="Please Enter valid Address">
+                                                    <f:validateRegex for="PAddress2" pattern="^[a-zA-Z0-9 ,]+$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="PAddress2" style="color:red"></h:message>
+                                            
+                                        </div>       
+                                        
+                               
+                                    <div class="row">
+                                        <div class="input-box col-sm-4">
+                                         <label class="label-text">City </label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-mail-reply form-icon"></span>-->
+                                            <h:inputText class="form-control" id="city" value="#{bookingJSFManagedBean.city}" required="true" requiredMessage="Please Enter City" validatorMessage="Please Enter valid City">
+                                                    <f:validateRegex for="city" pattern="^[a-zA-Z]+$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="city" style="color:red"></h:message>
+                                            
+                                        </div>    
+                                        </div>
+                                        <div class="input-box col-sm-4">
+                                            
+                                         <label class="label-text">Pincode </label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-mail-reply form-icon"></span>-->
+                                            <h:inputText class="form-control" id="pincode" value="#{bookingJSFManagedBean.pincode}" required="true" requiredMessage="Please Enter Pincode" validatorMessage="Please Enter valid Pincode">
+                                                    <f:validateRegex for="pincode" pattern="^[0-9]+$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="pincode" style="color:red"></h:message>
+                                            
+                                        </div>       
+                                        </div>
+                                        <div class="input-box col-sm-4">
+                                         <label class="label-text">State </label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-mail-reply form-icon"></span>-->
+                                            <h:inputText class="form-control" id="state" value="#{bookingJSFManagedBean.state}" required="true" requiredMessage="Please Enter State" validatorMessage="Please Enter valid State">
+                                                    <f:validateRegex for="state" pattern="^[a-zA-Z]+$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="state" style="color:red"></h:message>
+                                            
+                                        </div>  
+                                        </div>
+                                    </div> 
+                                    
+                                    
+                                              <label class="label-text">Booking Notes </label>
+                                        <div class="form-group">
+<!--                                            <span class="la la-mail-reply form-icon"></span>-->
+                                            <h:inputText class="form-control" id="bnotes" value="#{bookingJSFManagedBean.bookNotes}" >
+                                                   
+                                                </h:inputText>
+                                            
+                                        </div>    
+                                        
+                                       
+                                            <label class="label-text">PayMode</label>
+                                            <div class="form-group">
+                                                <div class="select-contain w-auto">
+                                                    <h:selectOneRadio id="pmode" value="#{bookingJSFManagedBean.paymode}" class="form-control" validatorMessage="Please Select Mode of Payment">
+                                                    <f:selectItem itemValue="COD" itemLabel="&nbsp;COD&nbsp;&nbsp;&nbsp;" class="form-control"></f:selectItem>
+                                                    <f:selectItem itemValue="Pay Pal" itemLabel="&nbsp;Pay Pal&nbsp;&nbsp;&nbsp;" class="form-control"></f:selectItem>
+                                                    <f:validateRequired></f:validateRequired>
+                                                </h:selectOneRadio>
+                                                <h:message for="pmode" style="color:red"></h:message>
+                                                </div>
+                                            </div>
+                                       
+                                 
+                                              
+                                              
+                                    
+ 
+                                    <div>
+
+<h:messages globalOnly="true"  style="color: red;"></h:messages>
+                                    </div>
+                                    <div class="btn-box">
+
+                                        <h:commandButton type="submit" class="theme-btn" value="BookNow" action="#{bookingJSFManagedBean.BookCar()}"></h:commandButton>
+                                    </div>
+                                    <br />
+                                     
+                                </h:form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-lg-4 mx-auto">
+                    <div class="">
+                        <br/>
+                        <br/><!-- comment -->
+                        <br/>
+                        <br/><!-- comment -->
+                         
+                        
+                        <h:graphicImage value="/upload/#{bookingJSFManagedBean.bpack.carid.image}" height="150px" width="150px"></h:graphicImage><br/>
+                        <b>Model Details</b> #{bookingJSFManagedBean.bpack.carid.modelname} | #{bookingJSFManagedBean.bpack.carid.cartypeid.typename} | #{bookingJSFManagedBean.bpack.carid.drivemode} <br/>
+                 
+                        <b>Package Details</b> #{bookingJSFManagedBean.bpack.pname} <br/>
+                        <b>Price(₹)</b>   #{bookingJSFManagedBean.bpack.price}<br/>
+                        
+                        <b>Pickup Date</b> #{bookingJSFManagedBean.pickDate} <br/>
+                        <b>Pickup Time</b>   #{bookingJSFManagedBean.pickTime}<br/>
+                        <b>Drop Date</b> #{bookingJSFManagedBean.dropDate} <br/>
+                        <b>Drop Time</b>   #{bookingJSFManagedBean.dropTime}<br/>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            </ui:define>
+        </ui:composition>
+            
+
+    </h:body>
+</html>
+

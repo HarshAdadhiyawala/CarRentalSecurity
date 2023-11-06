@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>View Feedback</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="AdminLayout.xhtml">
+            <ui:define name="content">
+
+            <div class="container-fluid">                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="float-end">
+                                <ol class="breadcrumb">
+                                    <li class=""><a href="#"></a></li>
+                                    <li class=""><a href="#"></a></li>
+                                    <li class=""></li>
+                                </ol>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <h4 class="card-title">Feedback Details </h4>
+                                    </div>
+                                    <div class="col-2">
+<!--                                        <a href="addcruise.xhtml" class="btn btn-dark">Add Cruise</a>-->
+                                    </div>                                    
+                                </div>
+                                
+
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                    <div class="table-responsive">
+<!--                        <h:form>-->
+<h:dataTable class="table" id="datatable_1" value="#{feedbackJSFManagedBean.showfeedback()}" var="feed">
+                            <h:column>
+                                <f:facet name="header" class="thead-light">
+                                   Feedback ID
+                                </f:facet>
+                                <!--#{feed.feedbackid}-->
+                                #{feedbackJSFManagedBean.showfeedback().indexOf(feed)+1}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" class="thead-light">
+                                    Email
+                                </f:facet>
+                                #{feed.email}
+                            </h:column>    
+                            <h:column>
+                                <f:facet name="header" class="thead-light">
+                                    Message
+                                </f:facet>
+                                #{feed.message}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" class="thead-light">
+                                    Action
+                                </f:facet>
+                            <h:form>
+                                <h:commandLink value="Delete" class="btn btn-dark" action="#{feedbackJSFManagedBean.deletefeedback(feed.feedbackid)}"></h:commandLink>
+                            </h:form> 
+                            </h:column>
+                          
+                        </h:dataTable>
+<!--</h:form>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+                
+            </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

@@ -1,0 +1,622 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--        <h:outputStylesheet name="../resources/css/default.css"/>
+        <h:outputStylesheet name="../resources/css/cssLayout.css"/>-->
+        <title></title>
+           <!-- App css -->
+         <link href="../resources/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+         <link href="../resources/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+         <link href="../resources/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+         
+         <link rel="shortcut icon" href="../resources/assets/images/car-logo.png"/>
+        <link href="../resources/assets/plugins/datatables/datatable.css" rel="stylesheet" type="text/css" />
+
+        <link href="../resources/assets/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../resources/assets/plugins/animate/animate.min.css" rel="stylesheet" type="text/css"/>
+     
+    </h:head>
+
+    <h:body class="dark-sidebar">
+
+
+        <div id="top" class="top">
+            <ui:insert name="top">
+                   <div class="topbar">            
+            <!-- Navbar -->
+            <nav class="navbar-custom" id="navbar-custom">    
+                <ul class="list-unstyled topbar-nav float-end mb-0">
+<!--                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="false" aria-expanded="false">
+                            <img src="../resources/assets/images/flags/us_flag.jpg" alt="" class="thumb-xxs rounded"></img>
+                    </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"><img src="../resources/assets/images/flags/us_flag.jpg" alt="" height="15" class="me-2"/>English</a>
+                            <a class="dropdown-item" href="#"><img src="../resources/assets/images/flags/spain_flag.jpg" alt="" height="15" class="me-2"/>Spanish</a>
+                            <a class="dropdown-item" href="#"><img src="../resources/assets/images/flags/germany_flag.jpg" alt="" height="15" class="me-2"/>German</a>
+                            <a class="dropdown-item" href="#"><img src="../resources/assets/images/flags/french_flag.jpg" alt="" height="15" class="me-2"/>French</a>
+                        </div>
+                    </li>end topbar-language-->
+           
+<!--                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <i class="ti ti-mail"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-lg pt-0">
+               
+                            <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
+                                Emails <span class="badge bg-soft-primary badge-pill">3</span>
+                            </h6>
+                            <div class="notification-menu" data-simplebar="">
+                                 item
+                                <a href="#" class="dropdown-item py-3">
+                                    <small class="float-end text-muted ps-2">2 min ago</small>
+                                    <div class="media">
+                                        <div class="avatar-md bg-soft-primary">
+                                            <img src="../resources/assets/images/users/user-1.jpg" alt="" class="thumb-sm rounded-circle"/>
+                                        </div>
+                                        <div class="media-body align-self-center ms-2 text-truncate">
+                                            <h6 class="my-0 fw-normal text-dark">Your order is placed</h6>
+                                            <small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+                                        </div>end media-body
+                                    </div>end media
+                                </a>end-item
+                                 item
+                                <a href="#" class="dropdown-item py-3">
+                                    <small class="float-end text-muted ps-2">10 min ago</small>
+                                    <div class="media">
+                                        <div class="avatar-md bg-soft-primary">
+                                            <img src="../resources/assets/images/users/user-4.jpg" alt="" class="thumb-sm rounded-circle"/>
+                                        </div>
+                                        <div class="media-body align-self-center ms-2 text-truncate">
+                                            <h6 class="my-0 fw-normal text-dark">Meeting with designers</h6>
+                                            <small class="text-muted mb-0">It is a long established fact that a reader.</small>
+                                        </div>end media-body
+                                    </div>end media
+                                </a>end-item
+                                 item
+                                <a href="#" class="dropdown-item py-3">
+                                    <small class="float-end text-muted ps-2">40 min ago</small>
+                                    <div class="media">
+                                        <div class="avatar-md bg-soft-primary">
+                                            <img src="../resources/assets/images/users/user-2.jpg" alt="" class="thumb-sm rounded-circle"/>
+                                        </div>
+                                        <div class="media-body align-self-center ms-2 text-truncate">
+                                            <h6 class="my-0 fw-normal text-dark">UX 3 Task complete.</h6>
+                                            <small class="text-muted mb-0">Dummy text of the printing.</small>
+                                        </div>end media-body
+                                    </div>end media
+                                </a>end-item
+                                 item
+                                <a href="#" class="dropdown-item py-3">
+                                    <small class="float-end text-muted ps-2">1 hr ago</small>
+                                    <div class="media">
+                                        <div class="avatar-md bg-soft-primary">
+                                            <img src="../resources/assets/images/users/user-5.jpg" alt="" class="thumb-sm rounded-circle"/>
+                                        </div>
+                                        <div class="media-body align-self-center ms-2 text-truncate">
+                                            <h6 class="my-0 fw-normal text-dark">Your order is placed</h6>
+                                            <small class="text-muted mb-0">It is a long established fact that a reader.</small>
+                                        </div>end media-body
+                                    </div>end media
+                                </a>end-item
+                                 item
+                                <a href="#" class="dropdown-item py-3">
+                                    <small class="float-end text-muted ps-2">2 hrs ago</small>
+                                    <div class="media">
+                                        <div class="avatar-md bg-soft-primary">
+                                            <img src="../resources/assets/images/users/user-3.jpg" alt="" class="thumb-sm rounded-circle"/>
+                                        </div>
+                                        <div class="media-body align-self-center ms-2 text-truncate">
+                                            <h6 class="my-0 fw-normal text-dark">Payment Successfull</h6>
+                                            <small class="text-muted mb-0">Dummy text of the printing.</small>
+                                        </div>end media-body
+                                    </div>end media
+                                </a>end-item
+                            </div>
+                             All
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
+                                View all <i class="fi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </li>-->
+
+<!--                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <i class="ti ti-bell"></i>
+                            <span class="alert-badge"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-lg pt-0">
+               
+                            <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
+                                Notifications <span class="badge bg-soft-primary badge-pill">2</span>
+                            </h6>
+                            <div class="notification-menu" data-simplebar="">
+                                 item
+                                <a href="#" class="dropdown-item py-3">
+                                    <small class="float-end text-muted ps-2">2 min ago</small>
+                                    <div class="media">
+                                        <div class="avatar-md bg-soft-primary">
+                                            <i class="ti ti-chart-arcs"></i>
+                                        </div>
+                                        <div class="media-body align-self-center ms-2 text-truncate">
+                                            <h6 class="my-0 fw-normal text-dark">Your order is placed</h6>
+                                            <small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+                                        </div>end media-body
+                                    </div>end media
+                                </a>end-item
+                                 item
+                                <a href="#" class="dropdown-item py-3">
+                                    <small class="float-end text-muted ps-2">10 min ago</small>
+                                    <div class="media">
+                                        <div class="avatar-md bg-soft-primary">
+                                            <i class="ti ti-device-computer-camera"></i>
+                                        </div>
+                                        <div class="media-body align-self-center ms-2 text-truncate">
+                                            <h6 class="my-0 fw-normal text-dark">Meeting with designers</h6>
+                                            <small class="text-muted mb-0">It is a long established fact that a reader.</small>
+                                        </div>end media-body
+                                    </div>end media
+                                </a>end-item
+                                 item
+                                <a href="#" class="dropdown-item py-3">
+                                    <small class="float-end text-muted ps-2">40 min ago</small>
+                                    <div class="media">
+                                        <div class="avatar-md bg-soft-primary">                                                    
+                                            <i class="ti ti-diamond"></i>
+                                        </div>
+                                        <div class="media-body align-self-center ms-2 text-truncate">
+                                            <h6 class="my-0 fw-normal text-dark">UX 3 Task complete.</h6>
+                                            <small class="text-muted mb-0">Dummy text of the printing.</small>
+                                        </div>end media-body
+                                    </div>end media
+                                </a>end-item
+                                 item
+                                <a href="#" class="dropdown-item py-3">
+                                    <small class="float-end text-muted ps-2">1 hr ago</small>
+                                    <div class="media">
+                                        <div class="avatar-md bg-soft-primary">
+                                            <i class="ti ti-drone"></i>
+                                        </div>
+                                        <div class="media-body align-self-center ms-2 text-truncate">
+                                            <h6 class="my-0 fw-normal text-dark">Your order is placed</h6>
+                                            <small class="text-muted mb-0">It is a long established fact that a reader.</small>
+                                        </div>end media-body
+                                    </div>end media
+                                </a>end-item
+                                 item
+                                <a href="#" class="dropdown-item py-3">
+                                    <small class="float-end text-muted ps-2">2 hrs ago</small>
+                                    <div class="media">
+                                        <div class="avatar-md bg-soft-primary">
+                                            <i class="ti ti-users"></i>
+                                        </div>
+                                        <div class="media-body align-self-center ms-2 text-truncate">
+                                            <h6 class="my-0 fw-normal text-dark">Payment Successfull</h6>
+                                            <small class="text-muted mb-0">Dummy text of the printing.</small>
+                                        </div>end media-body
+                                    </div>end media
+                                </a>end-item
+                            </div>
+                             All
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
+                                View all <i class="fi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </li>-->
+
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle nav-user" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <img src="../resources/user/assets/images/771211useravtar.png" alt="profile-user" class="rounded-circle me-2 thumb-sm" />
+                                <div>
+                                    <small class="d-none d-md-block font-11">Admin</small>
+                                    <span class="d-none d-md-block fw-semibold font-12">Admin <i
+                                            class="mdi mdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+<!--                            <a class="dropdown-item" href="#"><i class="ti ti-user font-16 me-1 align-text-bottom"></i> Profile</a>
+                            <a class="dropdown-item" href="#"><i class="ti ti-settings font-16 me-1 align-text-bottom"></i> Settings</a>-->
+                            <div class="dropdown-divider mb-0"></div>
+<!--                            <a class="dropdown-item" href="#"><i class="ti ti-power font-16 me-1 align-text-bottom"></i> Logout</a>-->
+<h:form>
+    <h:commandLink class="dropdown-item" action="#{customerJSFManagedBean.adminlogout()}"><i class="ti ti-power font-16 me-1 align-text-bottom"></i> A Logout</h:commandLink>
+</h:form>
+                        </div>
+                    </li><!--end topbar-profile-->
+<!--                    <li class="notification-list">
+                        <a class="nav-link arrow-none nav-icon offcanvas-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#Appearance" role="button" aria-controls="Rightbar">
+                            <i class="ti ti-settings ti-spin"></i>
+                        </a>
+                    </li>  -->
+                </ul><!--end topbar-nav-->
+
+                <ul class="list-unstyled topbar-nav mb-0">                        
+                    <li>
+                        <button class="nav-link button-menu-mobile nav-icon" id="togglemenu">
+                            <i class="ti ti-menu-2"></i>
+                        </button>
+                    </li>
+<!--                    <li class="hide-phone app-search">
+                        <form role="search" action="#" method="get">
+                            <input type="search" name="search" class="form-control top-search mb-0" placeholder="Type text..."/>
+                            <button type="submit"><i class="ti ti-search"></i></button>
+                        </form>
+                    </li>                      -->
+                </ul>
+            </nav>
+            <!-- end navbar-->
+        </div>
+            </ui:insert>
+        </div>
+        <div>
+            <div id="left">
+                <ui:insert name="left">
+                      <div class="left-sidebar">
+            <!-- LOGO -->
+            <div class="brand">
+                <a href="admindashboard.jsf" class="logo">
+                    <span>
+                        <img src="../resources/assets/images/car-logo.png" alt="logo-small" height="50px" width="50px"/>
+                    </span>
+<!--                    <span style="color:white;font-size:30px;font-style: inherit;font-weight:bold">
+                        Cruisin-->
+<!--                        <img src="../resources/user/assets/images/Cruisin1-removebg-preview.png" alt="logo-large" class="logo-lg logo-light"/>-->
+<!--                        <img src="../resources/assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark"/>-->
+<!--                    </span>-->
+                </a>
+            </div>
+<!--            <div class="sidebar-user-pro media border-end">                    
+                <div class="position-relative mx-auto">
+                    <img src="../resources/assets/images/users/user-4.jpg" alt="user" class="rounded-circle thumb-md"/>
+                    <span class="online-icon position-absolute end-0"><i class="mdi mdi-record text-success"></i></span>
+                </div>
+                <div class="media-body ms-2 user-detail align-self-center">
+                    <h5 class="font-14 m-0 fw-bold">Mr. Michael Hill </h5>  
+                    <p class="opacity-50 mb-0">michael.hill@exemple.com</p>          
+                </div>                    
+            </div>
+            <div class="border-end">
+                <ul class="nav nav-tabs menu-tab nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#Main" role="tab" aria-selected="true">M<span>ain</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#Extra" role="tab" aria-selected="false">E<span>xtra</span></a>
+                    </li>
+                </ul>
+            </div>-->
+            <!-- Tab panes -->
+   
+            <!--end logo-->
+            <div class="menu-content h-100" data-simplebar="">
+                <div class="menu-body navbar-vertical">
+                    <div class="collapse navbar-collapse tab-content" id="sidebarCollapse">
+                        <!-- Navigation -->
+                        <ul class="navbar-nav tab-pane active" id="Main" role="tabpanel">
+                                       
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sidebarAnalytics" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarAnalytics">
+                                    <i class="ti ti-stack menu-icon"></i>
+                                    <span>City</span>
+                                </a>
+                                <div class="collapse " id="sidebarAnalytics">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="addcity.jsf">Add City</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="viewcity.jsf" class="nav-link ">View City</a>
+                                        </li>
+,
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarAnalytics-->
+                                                </li><!--end nav-item-->
+                                                
+                            
+                             <li class="nav-item">
+                                <a class="nav-link" href="#sidebarAnalytics2" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarAnalytics2">
+                                    <i class="ti ti-car-crane menu-icon"></i>
+                                    <span>Car Types</span>
+                                </a>
+                                <div class="collapse " id="sidebarAnalytics2">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="addcartype.jsf">Add Type</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="viewcartype.jsf" class="nav-link ">View Type</a>
+                                        </li>
+,
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarAnalytics-->
+                                                </li><!--end nav-item-->
+                                                
+       
+                              <li class="nav-item">
+                                <a class="nav-link" href="#sidebarAnalytics3" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarAnalytics3">
+                                    <i class="ti ti-tag menu-icon"></i>
+                                    <span>Terms And Conditions</span>
+                                </a>
+                                <div class="collapse " id="sidebarAnalytics3">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="addterms.jsf">Add Terms</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="viewterms.jsf" class="nav-link ">View Terms </a>
+                                        </li>
+,
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarAnalytics-->
+                               </li><!--end nav-item-->
+                                                
+                                                
+<!--                            <li class="menu-label mt-0 text-primary font-12 fw-semibold">C<span>ruise Ship</span><br/>
+                                <span class="font-10 text-secondary fw-normal">Unique Dashboard</span>
+                            </li>                    -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sidebarCrypto" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarCrypto">
+                                    <i class="ti ti-car menu-icon"></i>
+                                    <span>Cars</span>
+                                </a>
+                                <div class="collapse " id="sidebarCrypto">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="addcars.jsf">Add Cars</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewcar.jsf">View Cars</a>
+                                        </li><!--end nav-item-->
+                                                       
+                                        <!--end nav-item--><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarCrypto-->
+                            </li><!--end nav-item-->
+                            
+                            
+                                <li class="nav-item">
+                                <a class="nav-link" href="#sidebarCrypto2" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarCrypto2">
+                                    <i class="ti ti-brand-codesandbox menu-icon"></i>
+                                    <span>Car Package</span>
+                                </a>
+                                <div class="collapse " id="sidebarCrypto2">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="addcarpackage.jsf">Add Car Packages</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewcarpackage.jsf">View Car Packages</a>
+                                        </li><!--end nav-item-->
+                                                       
+                                        <!--end nav-item--><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarCrypto-->
+                            </li><!--end nav-item-->
+                            
+                            
+                            
+<!--                            <li class="menu-label mt-0 text-primary font-12 fw-semibold">C<span>ruises</span><br/>
+                             </li>                    
+ -->
+<!--                            <li class="nav-item">
+                                <a class="nav-link" href="#sidebarProjects" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarProjects">
+                                    <i class="ti ti-brand-asana menu-icon"></i>
+                                    <span>Cruises</span>
+                                </a>
+                                <div class="collapse " id="sidebarProjects">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewpackage.xhtml">Cruise Packages</a>
+                                        </li> 
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewitinerary.xhtml">Itinerary</a>
+                                        </li> 
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewfacility.xhtml">Facility</a>
+                                        </li> 
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewevent.xhtml">Event</a>
+                                        </li> 
+                                    </ul> 
+                                </div> 
+                            </li>-->
+<!--                            <li class="menu-label mt-0 text-primary font-12 fw-semibold">B<span>ooking</span><br/>
+ 
+                            </li>                    -->
+                             
+                           <li class="nav-item">
+                                <a class="nav-link" href="#sidebarElements5" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarElements5">
+                                    <i class="ti ti-3d-cube-sphere menu-icon"></i>
+                                <span>Booking</span>
+                                </a>
+                                <div class="collapse " id="sidebarElements5">
+<!--                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="addfaq.jsf">Add Questions - Answers</a>
+                                        </li>end nav-item
+                                    </ul>end nav-->
+                                    
+                                       <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewbookings.jsf">View Bookings</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarElements-->
+                            </li><!--end nav-item-->
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sidebarElements" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarElements">
+                                    <i class="ti ti-file-upload menu-icon"></i>
+                                <span>FAQs</span>
+                                </a>
+                                <div class="collapse " id="sidebarElements">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="addfaq.jsf">Add Questions - Answers</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                    
+                                       <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewfaq.jsf">View Questions - Answers</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarElements-->
+                            </li><!--end nav-item-->
+                            
+                            
+                            
+                             <li class="nav-item">
+                                <a class="nav-link" href="#sidebarElements2" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarElements2">
+                                    <i class="ti ti-alarm menu-icon"></i>
+                                <span>FeedBack</span>
+                                </a>
+                                <div class="collapse " id="sidebarElements2">
+                                     
+                                    
+                                       <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewfeedback.jsf">View FeedBack</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarElements-->
+                            </li><!--end nav-item-->
+                            
+                             <li class="nav-item">
+                                <a class="nav-link" href="#sidebarElements3" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarElements3">
+                                    <i class="ti ti-file-certificate menu-icon"></i>
+                                <span>Contact US</span>
+                                </a>
+                                <div class="collapse " id="sidebarElements3">
+                                     
+                                    
+                                       <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewcontactus.jsf">View Contactus</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarElements-->
+                            </li><!--end nav-item-->
+                            
+                            
+                            
+                             <li class="nav-item">
+                                <a class="nav-link" href="#sidebarPages" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarPages">
+                                    <i class="ti ti-file-diff menu-icon"></i>
+                                    <span>Staff </span>
+                                </a>
+                                <div class="collapse " id="sidebarPages">
+                                    <ul class="nav flex-column">
+                                       <li class="nav-item">
+                                            <a class="nav-link" href="addteam.jsf">Add Staff</a>
+                                        </li><!--end nav-item-->
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewteam.jsf">View Staff</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarPages-->
+                            </li><!--end nav-item-->
+                            
+                            
+                            
+<!--                            
+                            <li class="menu-label mt-0 text-primary font-12 fw-semibold">U<span>tilities</span><br/>
+                                <span class="font-10 text-secondary fw-normal">Unique Dashboard</span>
+                            </li>                    
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sidebarAdvancedUI" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarAdvancedUI">
+                                    <i class="ti ti-chart-bubble menu-icon"></i>
+                                    <span>Utilities</span>
+                                </a>
+                                <div class="collapse " id="sidebarAdvancedUI">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewcontactus.xhtml">Contact Us</a>
+                                        </li>end nav-item
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewfeedback.xhtml">Feedback</a>
+                                        </li>end nav-item
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewstory.xhtml">Story</a>
+                                        </li>end nav-item
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="viewtestimonial.xhtml">Testimonial</a>
+                                        </li>end nav-item
+                                    </ul>end nav
+                                </div>end sidebarAdvancedUI
+                            </li>end nav-item-->
+
+                        </ul>
+<!--                        <ul class="navbar-nav tab-pane" id="Extra" role="tabpanel">
+                            <li>
+                                <div class="update-msg text-center position-relative">
+                                    <button type="button" class="btn-close position-absolute end-0 me-2" aria-label="Close"></button>
+                                    <img src="../resources/assets/images/speaker-light.png" alt="" class="" height="110"/>
+                                    <h5 class="mt-0">Mannat Themes</h5>
+                                    <p class="mb-3">We Design and Develop Clean and High Quality Web Applications</p>
+                                    <a href="javascript: void(0);" class="btn btn-outline-warning btn-sm">Upgrade your plan</a>
+                                </div>
+                            </li>
+                        </ul>-->
+                    </div>
+                </div>
+            </div>    
+        </div>
+                </ui:insert>
+            </div>
+            <div id="content" class="left_content">
+                <div class="page-wrapper">
+
+            <!-- Page Content-->
+                      <div class="page-content-tab">
+
+                            <div class="container-fluid">
+                                    <ui:insert name="content">
+                   
+<!--                                          Hello World-->
+                   
+                                       </ui:insert>
+                            </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+       
+   
+      <script src="../resources/assets/plugins/apexcharts/apexcharts.min.js"></script>
+        <script src="../resources/assets/pages/analytics-index.init.js"></script>
+        
+            <script src="../resources/assets/plugins/datatables/simple-datatables.js"></script>
+    <script src="../resources/assets/pages/datatable.init.js"></script>
+<script src="../resources/assets/js/app.js"></script>
+            <script src="../resources/assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
+    <script src="../resources/assets/pages/sweet-alert.init.js"></script>
+    <!-- App js -->
+<!--    <script src="assets/js/app.js"></script>-->
+ </h:body>
+</html>

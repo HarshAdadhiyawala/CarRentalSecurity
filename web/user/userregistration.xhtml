@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>User Registration</title>
+    </h:head>
+    <h:body>
+         <ui:composition template="UserLayout.xhtml">
+            <ui:define name="content">
+         
+    <section class="breadcrumb-area bread-bg-11">
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="breadcrumb-content">
+                        <div class="section-heading">
+                            <h2 class="sec__title text-white">Registration</h2>
+                        </div>
+                    </div><!-- end breadcrumb-content -->
+                </div><!-- end col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="breadcrumb-list text-right">
+                        <ul class="list-items">
+                            <li><a href="viewuserhome.xhtml">Home</a></li>
+                            <li>Registration</li>
+                        </ul>
+                    </div><!-- end breadcrumb-list -->
+                </div><!-- end col-lg-6 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end breadcrumb-wrap -->
+    
+</section>
+   
+    <section class="contact-area padding-top-100px padding-bottom-70px">
+        <div class="container">
+            <div class="row">
+<!--                <div class="col-lg-5 mx-auto">
+                        <div class="form-box login-left">
+
+                        </div>
+                    </div>-->
+
+                <div class="col-lg-12 mx-auto">
+                    <div class="form-box">
+                        <div class="form-title-wrap">
+                            <h2 class="">Register Here</h2>
+                          
+                            <br />
+                            <p class="font-size-15 pt-2">
+                                Already Have an Account?
+                                <a href="userlogin.jsf" class="text-color">Login Here</a>
+                            </p>
+                        </div><!-- form-title-wrap -->
+                        <div class="form-content ">
+                            <div class="contact-form-action">
+                                <h:form>
+                                    <div class="row">
+                                        <div class="input-box col-lg-6">
+                                            <label class="label-text">Enter Your Name</label>
+                                            <div class="form-group">
+                                                <span class="la la-user form-icon"></span>
+                                                
+                                                <h:inputText class="form-control" id="uname" value="#{bookingJSFManagedBean.fname}" required="true" requiredMessage="Please Enter Name" validatorMessage="Name contains only aplhabets">
+                                                <f:validateRequired></f:validateRequired>
+                                                <f:validateRegex pattern="(^[A-Za-z]{2,50}$)"></f:validateRegex>    
+                                                </h:inputText>
+
+                                                <h:message for="uname" style="color:red"></h:message>
+                                            </div>
+                                        </div>
+<!--
+-->                                        <div class="input-box col-lg-6">
+                                            <label class="label-text">Select Gender</label>
+                                            <div class="form-group">
+                                             <span class="la la-genderless form-icon"></span>
+                                                <h:selectOneRadio id="ugender" value="#{bookingJSFManagedBean.gender}" class="form-control" validatorMessage="Please Select Gender">
+                                                    <f:selectItem itemValue="male" itemLabel="&nbsp;Male&nbsp;&nbsp;&nbsp;" class="form-control"></f:selectItem>
+                                                    <f:selectItem itemValue="female" itemLabel="&nbsp;Female&nbsp;&nbsp;&nbsp;" class="form-control"></f:selectItem>
+                                                    <f:validateRequired></f:validateRequired>
+                                                </h:selectOneRadio>
+                                                <h:message for="ugender" style="color:red"></h:message>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                       <div class="row">
+                                       
+
+                                        <div class="input-box col-lg-6">
+                                            <label class="label-text">Enter Address</label>
+                                            <div class="form-group">
+                                                <span class="la la-address-book form-icon"></span>
+                                              
+                                                <h:inputTextarea class="form-control" id="uaddress" value="#{bookingJSFManagedBean.PAddress1}" required="true" requiredMessage="Please Enter Address"></h:inputTextarea>
+                                                <h:message for="uaddress" style="color: red"></h:message>
+                                            </div>
+                                        </div>
+                                         <div class="input-box col-lg-6">
+                                            <label class="label-text">City</label>
+                                            <div class="form-group">
+                                                <span class="la la-city form-icon"></span>
+                                               
+                                                <h:selectOneMenu value="#{bookingJSFManagedBean.cityid}" class="form-control">
+                                                    <f:selectItems value="#{cityJSFManagedBean.showcity()}" var="c" itemLabel="#{c.cityname}" itemValue="#{c.id}"></f:selectItems>
+                                                </h:selectOneMenu>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                        <div class="row">
+                                         <div class="input-box col-lg-6">
+                                            <label class="label-text">Enter Contact Number</label>
+                                            <div class="form-group">
+                                                <span class="la la-mobile-phone form-icon"></span>
+                                               
+                                                <h:inputText class="form-control" id="ucontactno" value="#{bookingJSFManagedBean.CNo1}" required="true" requiredMessage="Please Enter Contact Number" validatorMessage="Only Digits Allowed (10 Digits)">
+                                                    <f:validateRegex pattern="(^[0-9]{10}$)"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="ucontactno" style="color:red"></h:message>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box col-lg-6">
+                                            <label class="label-text">Enter Email Address</label>
+                                            <div class="form-group">
+                                                <span class="la la-envelope-o form-icon"></span>                                             
+                                                <h:inputText class="form-control" id="uemail" value="#{bookingJSFManagedBean.email}" required="true" requiredMessage="Please Enter Email" validatorMessage="Please Enter valid Email Format">
+                                                    <f:validateRegex for="uemail" pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"></f:validateRegex>
+                                                </h:inputText>
+                                                <h:message for="uemail" style="color:red"></h:message>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+ <div class="row">
+                                        <div class="input-box col-lg-6">
+                                            <label class="label-text">Enter Password</label>
+                                            <div class="form-group">
+                                                <span class="la la-lock form-icon"></span>
+                                                 <h:inputSecret class="form-control" id="upassword" value="#{bookingJSFManagedBean.password}" required="true" requiredMessage="Please Enter Password"></h:inputSecret>
+                                                <h:message for="upassword" style="color:red"></h:message>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="btn-box">
+                                      <h:commandButton type="submit" class="theme-btn" value="Submit" action="#{bookingJSFManagedBean.insertUser()}"></h:commandButton>
+                                    </div>
+                                    <br />
+                                </h:form>
+                            </div><!-- end contact-form-action -->
+                        </div><!-- end form-content -->
+                    </div><!-- end form-box -->
+                </div><!-- end col-lg-8 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+            </ui:define>
+         </ui:composition>
+   
+    </h:body>
+</html>
+

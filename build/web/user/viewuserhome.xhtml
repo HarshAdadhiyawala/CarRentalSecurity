@@ -1,0 +1,767 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Facelet Title</title>
+          <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="TechyDevs"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Homepage</title>
+    <!-- Favicon -->
+    
+<!--    <link rel="icon" href="../resources/user/assets/images/icons8-national-park-96.png"/>-->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+      <link rel="shortcut icon" href="../resources/assets/images/car-logo.png"/>
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" href="../resources/user/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../resources/user/assets/css/bootstrap-select.min.css"/>
+    <link rel="stylesheet" href="../resources/user/assets/css/line-awesome.css"/>
+    <link rel="stylesheet" href="../resources/user/assets/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../resources/user/assets/css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="../resources/user/assets/css/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="../resources/user/assets/css/daterangepicker.css"/>
+    <link rel="stylesheet" href="../resources/user/assets/css/animated-headline.css"/>
+    <link rel="stylesheet" href="../resources/user/assets/css/jquery-ui.css"/>
+    <link rel="stylesheet" href="../resources/user/assets/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="../resources/user/assets/css/style.css"/>
+    </h:head>
+    <h:body>
+        <div id="top">
+            <ui:insert name="top">
+<!-- start cssload-loader -->
+<div class="preloader" id="preloader">
+    <div class="loader">
+        <svg class="spinner" viewBox="0 0 50 50">
+            <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+        </svg>
+    </div>
+</div>
+<!-- end cssload-loader -->
+
+
+
+<!-- ================================
+            START HEADER AREA
+================================= -->
+<header class="header-area">
+    <div class="header-top-bar padding-right-100px padding-left-100px">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="header-top-content">
+                        <div class="header-left">
+                            <ul class="list-items">
+                                <li><a href="#"><i class="la la-phone mr-1"></i>+91 - 1209977654</a></li>
+                                <li><a href="#"><i class="la la-envelope mr-1"></i>carrent@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="header-top-content">
+                        <div class="header-right d-flex align-items-center justify-content-end">
+ 
+                            <div class="header-right-action">
+                                <div class="select-contain select--contain w-auto">
+                                    
+                                </div>
+                            </div>
+ 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-menu-wrapper padding-right-100px padding-left-100px">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="menu-wrapper">
+                        <a href="#" class="down-button"><i class="la la-angle-down"></i></a>
+                        <div class="logo">
+                                     <a href="#"><img src="../resources/user/assets/images/user-logo.jfif" width="80px" height="60px" alt="logo"/></a>
+                   
+                            <div class="menu-toggler">
+                                <i class="la la-bars"></i>
+                                <i class="la la-times"></i>
+                            </div><!-- end menu-toggler -->
+                        </div><!-- end logo -->
+                        <div class="main-menu-content">
+                            <nav>
+                                <ul>
+                                    <li>
+<!--                                        <a href="#">Home <i class="la la-angle-down"></i></a>-->
+                                        <a href="viewuserhome.xhtml">Home </a>
+<!--                                        <ul class="dropdown-menu-item">
+                                            <li><a href="index.html">Home - main</a></li>
+                                            <li><a href="index2.html">Home - Hotel</a></li>
+                                            <li><a href="index3.html">Home - Activity</a></li>
+                                            <li><a href="index4.html">Home - Car</a></li>
+                                            <li><a href="index5.html">Home - Cruise</a></li>
+                                            <li><a href="index6.html">Home - Flight</a></li>
+                                            <li><a href="index7.html">Home - City Tour <span class="badge bg-2 text-white">New</span></a></li>
+                                        </ul>-->
+                                    </li>
+                                    <li>
+                                        <a href="viewuser_cars.jsf">Book Car </a>
+<!--                                        <ul class="dropdown-menu-item">
+                                            <li><a href="viewusercruiseship.xhtml">Cruiseship</a></li>-->
+<!--                                            <li><a href="tour-grid.html">Tour Grid</a></li>
+                                            <li><a href="tour-list.html">Tour List</a></li>
+                                            <li><a href="tour-left-sidebar.html">Tour Left Sidebar</a></li>
+                                            <li><a href="tour-right-sidebar.html">Tour Right Sidebar</a></li>
+                                            <li><a href="tour-details.html">Tour details</a></li>
+                                            <li><a href="tour-booking.html">Tour Booking</a></li>
+                                            <li><a href="tour-search-result.html">Tour Search Result</a></li>-->
+<!--                                        </ul>
+-->                                    </li>
+                                    <li>
+                                           <a href="viewuser_carpackage.jsf">Packages </a>
+<!--                                        <ul class="dropdown-menu-item">-->
+<!--                                            <li><a href="cruises.html">Cruises</a></li>-->
+<!--                                            <li><a href="cruises-list.html">Cruise list</a></li>
+                                            <li><a href="cruise-sidebar.html">Cruise Sidebar</a></li>
+                                            <li><a href="cruise-details.html">Cruise details</a></li>
+                                            <li><a href="cruise-booking.html">Cruise Booking</a></li>
+                                            <li><a href="cruise-search-result.html">Cruise Search Result</a></li>-->
+<!--                                        </ul>-->
+                                    </li>
+<!--                                    <li>
+                                        <a href="#">Pages <i class="la la-angle-down"></i></a>
+                                        <div class="dropdown-menu-item mega-menu">
+                                            <ul class="row no-gutters">
+                                                <li class="col-lg-3 mega-menu-item">
+                                                    <ul>
+                                                        <li><a href="add-hotel.html">add hotel </a></li>
+                                                        <li><a href="add-flight.html">add flight </a></li>
+                                                        <li><a href="add-tour.html">add tour </a></li>
+                                                        <li><a href="add-cruise.html">add cruise </a></li>
+                                                        <li><a href="add-car.html">add car</a></li>
+                                                        <li><a href="user-dashboard.html">User Dashboard</a></li>
+                                                        <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                                                        <li><a href="career.html">career <span class="badge bg-2 text-white">New</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-lg-3 mega-menu-item">
+                                                    <ul>
+                                                        <li><a href="career-details.html">career details<span class="badge bg-2 text-white">New</span></a></li>
+                                                        <li><a href="user-profile.html">User profile</a></li>
+                                                        <li><a href="become-local-expert.html">Become Local Expert</a></li>
+                                                        <li><a href="contact.html">contact</a></li>
+                                                        <li><a href="cart.html">Cart</a></li>
+                                                        <li><a href="checkout.html">Checkout</a></li>
+                                                        <li><a href="recover.html">recover password</a></li>
+                                                        <li><a href="payment-received.html">payment received</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-lg-3 mega-menu-item">
+                                                    <ul>
+                                                        <li><a href="payment-complete.html">payment complete</a></li>
+                                                        <li><a href="destinations.html">Destinations</a></li>
+                                                        <li><a href="about.html">about</a></li>
+                                                        <li><a href="services.html">Our Services</a></li>
+                                                        <li><a href="gallery.html">Gallery</a></li>
+                                                        <li><a href="pricing.html">pricing</a></li>
+                                                        <li><a href="faq.html">faq</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-lg-3 mega-menu-item">
+                                                    <ul>
+                                                        <li><a href="add-new-post.html">add new post</a></li>
+                                                        <li><a href="blog-full-width.html">blog full width</a></li>
+                                                        <li><a href="blog-grid.html">blog grid</a></li>
+                                                        <li><a href="blog-sidebar.html">blog sidebar</a></li>
+                                                        <li><a href="blog-single.html">blog details</a></li>
+                                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                                        <li><a href="page-404.html">404 page</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>-->
+<!--                                    <li>
+                                        <a href="#">Flight <i class="la la-angle-down"></i></a>
+                                        <ul class="dropdown-menu-item">
+                                            <li><a href="flight-grid.html">Flight grid</a></li>
+                                            <li><a href="flight-list.html">Flight list</a></li>
+                                            <li><a href="flight-sidebar.html">Flight sidebar </a></li>
+                                            <li><a href="flight-single.html">Flight details</a></li>
+                                            <li><a href="flight-booking.html">Flight Booking</a></li>
+                                            <li><a href="flight-search-result.html">Flight Search Result</a></li>
+                                        </ul>
+                                    </li>-->
+                                    <li>
+                                        <a href="#">Utilities <i class="la la-angle-down"></i></a>
+                                        <ul class="dropdown-menu-item">
+<!--                                             <li><a href="viewuserstory.xhtml">Feedbac</a></li>-->
+                                            <li><a href="viewuserterms.jsf">Terms And Conditions</a></li>
+                                            <li><a href="viewuserteam.jsf">Team Members</a></li>
+                                            
+<!--                                            <li><a href="viewusertestimonial.xhtml">Testimonial</a></li>-->
+                                            
+                                          
+<!--                                            <li><a href="hotel-single.html">Hotel details</a></li>
+                                            <li><a href="hotel-booking.html">Hotel Booking</a></li>
+                                            <li><a href="hotel-search-result.html">Hotel Search Result</a></li>-->
+<!--                                            <li>
+                                                <a href="#">Rooms <i class="la la-plus"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="room-list.html">Room List</a></li>
+                                                    <li><a href="room-grid.html">Room Grid</a></li>
+                                                    <li><a href="room-search-result.html">Search Result</a></li>
+                                                    <li><a href="room-search-result-list.html">Search Result list</a></li>
+                                                    <li><a href="room-details.html">Room Details</a></li>
+                                                </ul>
+                                            </li>-->
+                                        </ul>
+                                    </li>
+<li>
+    <a href="viewuserfaq.jsf">FAQs</a>
+</li>
+<!--                                    <li>
+                                        <a href="#">car <i class="la la-angle-down"></i></a>
+                                        <ul class="dropdown-menu-item">
+                                            <li><a href="car-grid.html">car grid</a></li>
+                                            <li><a href="car-list.html">car list</a></li>
+                                            <li><a href="car-sidebar.html">car sidebar </a></li>
+                                            <li><a href="car-single.html">car details</a></li>
+                                            <li><a href="car-booking.html">Car Booking</a></li>
+                                            <li><a href="car-search-result.html">Car Search Result</a></li>
+                                        </ul>
+                                    </li>-->
+                                    <li>
+                                        <a href="viewaboutus.jsf">About Us </a>
+<!--                                        <ul class="dropdown-menu-item">
+                                            <li><a href="car-grid.html">car grid</a></li>
+                                            <li><a href="car-list.html">car list</a></li>
+                                            <li><a href="car-sidebar.html">car sidebar </a></li>
+                                            <li><a href="car-single.html">car details</a></li>
+                                            <li><a href="car-booking.html">Car Booking</a></li>
+                                            <li><a href="car-search-result.html">Car Search Result</a></li>
+                                        </ul>-->
+                                    </li>
+                                    <li>
+                                        <a href="addusercontactus.jsf">Contact Us </a>
+<!--                                        <ul class="dropdown-menu-item">
+                                            <li><a href="car-grid.html">car grid</a></li>
+                                            <li><a href="car-list.html">car list</a></li>
+                                            <li><a href="car-sidebar.html">car sidebar </a></li>
+                                            <li><a href="car-single.html">car details</a></li>
+                                            <li><a href="car-booking.html">Car Booking</a></li>
+                                            <li><a href="car-search-result.html">Car Search Result</a></li>
+                                        </ul>-->
+                                    </li>
+   <li>
+        <h:form rendered="#{customerJSFManagedBean.uemail==null}" >
+            <a href="userlogin2.jsf">Login</a>
+        </h:form>
+                                    </li>
+
+<li>
+    <h:form rendered="#{customerJSFManagedBean.uemail.length()>0 }" >
+        
+         <a href="#">My Account <i class="la la-angle-down"></i></a>
+                                        <ul class="dropdown-menu-item">
+                                             
+                                         <li> <h:commandLink value="My Bookings" action="#{customerJSFManagedBean.mybookings()}"></h:commandLink></li>
+                                         <li> <h:commandLink value="Logout" action="#{customerJSFManagedBean.logout()}"></h:commandLink></li>
+                                            
+                                                </ul>
+     </h:form>                                       
+                                     
+   
+</li>
+
+
+
+
+                                </ul>
+                            </nav>
+                        </div><!-- end main-menu-content -->
+<!--                        <div class="nav-btn">
+                            <a href="become-local-expert.html" class="theme-btn">Become Local Expert</a>
+                        </div> end nav-btn -->
+                    </div><!-- end menu-wrapper -->
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+        </div><!-- end container-fluid -->
+    </div><!-- end header-menu-wrapper -->
+</header>
+            
+            </ui:insert>
+        </div>
+         <div id="content" class="center_content">
+             <ui:insert name="content">
+                 <!-- ================================
+        START HERO-WRAPPER AREA
+    ================================= -->
+    <section class="hero-wrapper hero-wrapper7">
+        <div class="hero-box">
+            <div id="fullscreen-slide-contain">
+                <ul class="slides-container">
+<!--                    <li><img src="../resources/user/assets/images/hero-bg2.jpg" alt=""/></li>
+                    <li><img src="../resources/user/assets/images/hero-bg2.jpg" alt=""/></li>
+                    <li><img src="../resources/user/assets/images/hero-bg3.jpg" alt=""/></li>-->
+<li><img src="../resources/user/assets/images/car-img.jpg" alt=""/></li>
+<li><img src="../resources/user/assets/images/car-img2.jpg" alt=""/></li>
+<li><img src="../resources/user/assets/images/car-img3.jpg" alt=""/></li>
+                </ul>
+            </div><!-- End background slider -->
+            <div class="container">
+<!--                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="hero-content pb-5 text-center">
+                            <div class="section-heading">
+                                <h2 class="sec__title font-size-70 pb-3"></h2>-->
+<!--                                <p class="sec__desc font-size-30 font-weight-medium">Collect Memories, Leave Footprints</p>-->
+                          
+  <h:form> 
+
+    
+
+                                <div class="row col-lg-12" style="background-color: white;border-radius: 4px;padding-top: 10px">
+                                         <div class="input-box col-sm-2">
+                                             <b>     <label class="label-text"  >City</label></b>
+                                        <div class="form-group">
+ 
+                                            <h:selectOneMenu value="#{bookingJSFManagedBean.cityid}" class="form-select" style="font-size: 26px">
+                                                    <f:selectItems value="#{cityJSFManagedBean.showcity()}" var="c" itemLabel="#{c.cityname}" itemValue="#{c.id}"></f:selectItems>
+                                            </h:selectOneMenu>
+                                            
+                                        </div>
+                                        </div>
+                                        
+                            <div class="input-box col-sm-4">
+                                <b> <label class="label-text" >Pickup Date and Time</label></b>
+                                        <div class="form-group">
+ 
+                                            <p:calendar id="pictupdate" value="#{bookingJSFManagedBean.pickDate}" />
+                                            
+                                          &nbsp;&nbsp;   <h:selectOneMenu value="#{bookingJSFManagedBean.pickTime}" class="form-group" style="font-size: 26px">
+                                                <f:selectItems value="#{bookingJSFManagedBean.timeslot}" var="c" itemLabel="#{c}" itemValue="#{c}"></f:selectItems>
+                                            </h:selectOneMenu>
+                                        </div>
+                                        </div>
+ 
+                              
+                              
+                             <div class="input-box col-sm-4">
+                                 <b>  <label class="label-text" >Drop Date And Time</label></b>
+                                        <div class="form-group">
+ 
+
+                                            <p:calendar id="dropdate" value="#{bookingJSFManagedBean.dropDate}" />
+                                            &nbsp;&nbsp;  <h:selectOneMenu value="#{bookingJSFManagedBean.dropTime}" class="form-select" style="font-size: 26px">
+                                                <f:selectItems value="#{bookingJSFManagedBean.timeslot}" ></f:selectItems>
+                                            </h:selectOneMenu>
+                                        </div>
+                                        </div>
+                                      
+                                    <div class="btn-box messenger-box-input-wrap" style="padding: 30px">
+                                     <h:commandButton type="submit" class="theme-btn" value="Search" action="#{bookingJSFManagedBean.searchCars()}"></h:commandButton>
+                                        </div>
+
+    </div>  
+<!--   <div class="col-lg-12">
+                                        
+                                        <div class="btn-box messenger-box-input-wrap">
+                                            <h:commandButton type="submit" class="theme-btn" value="Search" action="#{bookingJSFManagedBean.searchCars()}"></h:commandButton>
+                                            
+                                        </div>
+                                        
+                                    </div> end col-lg-12 
+    -->
+</h:form>
+               
+<!--                </div>
+                        </div> end hero-content 
+
+                    </div> end col-lg-12 
+                </div> end row 
+            </div> end container 
+        -->
+            </div>
+    </div>
+    </section><!-- end hero-wrapper -->
+    <!-- ================================
+        END HERO-WRAPPER AREA
+    ================================= -->
+
+    <section class="destination-area position-relative section-bg padding-top-100px padding-bottom-140px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading text-center">
+                        <h2 class="sec__title">Popular Packages</h2>
+                    </div><!-- end section-heading -->
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+            <div class="row padding-top-60px">
+                <div class="col-lg-12">
+                    <div class="car-wrap">
+                        <div class="car-carousel carousel-action">
+                            <c:forEach items="#{carpackageJSFManagedBean.showcarpackage()}" var="p">
+                                <div class="card-item destination-card">
+                                    <div class="card-img">
+                                        <h:graphicImage value="/upload/#{p.carid.image}"></h:graphicImage>
+
+                                        <span class="badge"> #{p.carid.cityid.cityname}</span>
+                                    </div>
+                                    
+                                    <div class="card-body">
+                                        <h3 class="card-title">
+<!--                                            <h:form>
+
+                                                                                            <h:commandLink value="#{p.id }" action="#{carpackageJSFManagedBean.searchcarpackage(p.id)}"></h:commandLink>
+</h:form>-->
+</h3>
+                                        <div class="card-rating d-flex align-items-center">
+                                          
+<!--                                            <span class="price__num"> #{p.pname} </span>-->
+                                        </div>
+                                        <div class="card-price d-flex align-items-center justify-content-between">
+                                           
+                                            <p>
+                                                <span class="price__num"> #{p.pname} </span><br/>
+                                                <span class="price__from">Price</span>
+                                                <span class="price__num">#{p.price}</span>
+                                                <span class="price__from">  (₹)</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!-- end card-item -->
+                            </c:forEach>
+
+                        </div><!-- end car-carousel -->
+                    </div>
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+        <svg class="cta-svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M-103.55,167.27 C150.39,-132.72 134.59,237.33 517.77,30.09 L500.00,150.00 L0.00,150.00 Z"></path></svg>
+    </section>
+    <!-- ================================
+        STAR FUNFACT AREA
+    ================================= -->
+<!--    <section class="funfact-area">
+        <div class="container">
+                      <div class="counter-box mt-5 pb-2">
+                <div class="row">
+                   
+                     <div class="col-lg-3 responsive-column">
+                            <div class="counter-item d-flex">
+                                <div class="counter-icon flex-shrink-0">
+                                    <i class="la la-ship"></i>
+                                </div>
+                                <div class="counter-content">
+                                    <span class="counter" data-from="0" data-to=" #{adminJSFManagedBean.totalcount()}
+                                                                            #{adminJSFManagedBean.cruisecnt}" data-refresh-interval="5">0</span>
+                                    <p class="counter__title">Total Cruise Ships</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    
+
+                        <div class="col-lg-3 responsive-column">
+                            <div class="counter-item d-flex">
+                                <div class="counter-icon flex-shrink-0">
+                                    <i class="la la-map-marked"></i>
+                                </div>
+                                <div class="counter-content">
+                                    <span class="counter" data-from="0" data-to=" #{adminJSFManagedBean.totalcount()}
+                                    #{adminJSFManagedBean.packagecnt}" data-refresh-interval="5">0</span>
+                                    <p class="counter__title">Total Packages</p>
+                                </div>
+                            </div>
+                        </div>
+                     <div class="col-lg-3 responsive-column">
+                            <div class="counter-item d-flex">
+                                <div class="counter-icon flex-shrink-0">
+                                    <i class="la la-users"></i>
+                                </div>
+                                <div class="counter-content">
+                                    <span class="counter" data-from="0" data-to="  #{adminJSFManagedBean.totalcount()}
+                                                                            #{adminJSFManagedBean.usercnt}" data-refresh-interval="5">0</span>
+                                    <span class="count-symbol"></span>
+                                    <p class="counter__title">Total Users</p>
+                                </div>
+                            </div>
+                        </div>
+                   
+
+                        <div class="col-lg-3 responsive-column">
+                            <div class="counter-item d-flex">
+                                <div class="counter-icon flex-shrink-0">
+                                    <i class="la la-chalkboard-teacher"></i>
+                                </div>
+                                <div class="counter-content">
+                                    <span class="counter" data-from="0" data-to=" #{adminJSFManagedBean.totalcount()}
+                                    #{adminJSFManagedBean.teamcnt}" data-refresh-interval="5">0</span>
+                                    <p class="counter__title">Our Total Team Members</p>
+                                </div>
+                            </div>
+                        </div>
+                   
+                       
+                   
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- ================================
+        END FUNFACT AREA
+    ================================= -->
+  <!-- ================================
+           START TESTIMONIAL AREA
+    ================================= -->
+<!--    <section class="testimonial-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading mb-0">
+                        <h2 class="sec__title curve-shape padding-bottom-30px" data-text="curvs">Customers Testimonial</h2>
+                    </div> end section-heading 
+                </div> end col-lg-12 
+            </div> end row  
+            <div class="row padding-top-50px">
+                <div class="col-lg-12">
+                    <div class="testimonial-carousel carousel-action">
+                        <c:forEach items="#{adminJSFManagedBean.showtestimonial()}" var="t">
+                            <div class="testimonial-card">
+                                <div class="testi-desc-box">
+                                    <p class="testi__desc">#{t.message}</p>
+                                </div>
+                                <div class="author-content d-flex align-items-center">
+                                    <div class="author-img">
+                                        <h:graphicImage value="/upload/#{t.image}"></h:graphicImage>
+                                    </div>
+                                    <div class="author-bio">
+                                        <h4 class="author__title">#{t.name}</h4>
+                                        
+                                        <span class="ratings d-flex align-items-center">
+
+                                      <p:rating value="#{t.rating}" readonly="true" />  
+
+                                     
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div> end testimonial-card 
+                        </c:forEach>
+                    </div> end testimonial-carousel 
+                </div> end col-lg-12 
+            </div> end row 
+        </div> end container 
+    </section> end testimonial-area -->
+    <!-- ================================
+           START TESTIMONIAL AREA
+    ================================= --> 
+    
+    <!-- ================================
+        START CTA AREA
+    ================================= -->
+<!--    <section class="cta-area cta-bg bg-fixed section-padding">-->
+<!--        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2 class="sec__title text-white font-size-50 line-height-60">Enjoy Your Ride <br/> with Us</h2>
+                        <p class="sec__desc text-white pt-3"></p>
+                    </div> end section-heading 
+                    <div class="btn-box padding-top-35px">
+                        <a href="viewuserpackage.xhtml" class="theme-btn border-0">Explore Now <i class="la la-arrow-right ml-1"></i></a>
+                    </div>
+                </div> end col-lg-12 
+            </div> end row 
+        </div> end container 
+    </section> end cta-area -->
+    <!-- ================================
+        END CTA AREA
+    ================================= -->
+<!-- ================================
+           START BLOG AREA
+    ================================= -->
+
+ 
+    
+    <!-- ================================
+           START BLOG AREA
+    ================================= -->   
+  <section class="cta-area subscriber-area section-bg-2 padding-top-60px padding-bottom-60px">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="section-heading">
+                                
+                                <h6 class="sec__title font-size-20 text-white">Give Your Valuable Feedback Here .. </h6>
+                            </div><!-- end section-heading -->
+                        </div><!-- end col-lg-7 -->
+                        <div class="col-lg-6">
+                            <div class="subscriber-box">
+                                <div class="contact-form-action">
+                                    <h:form>
+                                         <div class="row">
+                                        <div class="col-lg-5 responsive-column">
+                                        <h:inputText class="form-control" a:placeholder="Enter Your Email" id="femail" value="#{userJSFManagedBean.uemail}" required="true" requiredMessage="Please Enter Message" >
+                                                <f:validateRequired></f:validateRequired>
+                                        </h:inputText>
+                                          <h:message for="femail"  style="color: white;"></h:message>
+                                        </div>
+                                        
+                                          <div class="col-lg-5 responsive-column">
+                                                <div class="form-group mb-0">
+                                                <h:inputText class="form-control" a:placeholder="Enter Your Message" id="fmessage" value="#{userJSFManagedBean.fmessage}" required="true" requiredMessage="Please Enter Message">
+                                                <f:validateRequired></f:validateRequired>
+                                              </h:inputText>
+                                                     
+                                                <h:message for="fmessage"  style="color: white;"></h:message>
+                                                </div>
+                                          </div>     
+                                            <div class="col-lg-2 responsive-column">  
+                                                <div class="form-group mb-0">
+                                                    <h:commandButton type="submit" class="theme-btn theme-btn-small submit-btn" value="Submit" action="#{userJSFManagedBean.insertfeedback()}"></h:commandButton>
+                                                </div>
+                                            </div>   
+                                            
+                                             
+                                        </div>
+                                    </h:form>
+                                </div>
+                            </div><!-- end section-heading -->
+                        </div><!-- end col-lg-5 -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </section><!-- end cta-area -->    
+<!-- ================================
+           START FOOTER AREA
+    ================================= -->
+ 
+             </ui:insert>
+        </div>
+
+        <div id="bottom">
+            <ui:insert name="bottom">
+          <!-- ================================
+           START FOOTER AREA
+    ================================= -->
+    <section class="footer-area section-bg padding-top-40px padding-bottom-30px">
+        <!--<div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="term-box footer-item">
+                        <ul class="list-items list-items d-flex align-items-center">
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>-->
+        <!-- end col-lg-8 -->
+        <!--<div class="col-lg-4">
+            <div class="footer-social-box text-right">
+                <ul class="social-profile">
+                    <li><a href="#"><i class="lab la-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="lab la-twitter"></i></a></li>
+                    <li><a href="#"><i class="lab la-instagram"></i></a></li>
+                    <li><a href="#"><i class="lab la-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>-->
+        <!-- end col-lg-4 -->
+        <!--</div>--><!-- end row -->
+        <!--</div>-->
+        <div class="section-block mt-4 mb-5"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 responsive-column">
+                    <div class="footer-item">
+                        <div class="footer-logo padding-bottom-20px">
+<!--                            <a href="#" class="foot__logo"><img src="../resources/user/assets/images/Cruisin - Copy.png" alt="logo"/></a>-->
+                        </div><!-- end logo -->
+
+                        <ul class="list-items pt-3">
+                            <li>
+                                Easy-Rentals
+                                Vesu,
+                                Gujarat,<br/> Gujarat 395009
+                            </li>
+                           
+                        </ul>
+                    </div><!-- end footer-item -->
+                </div><!-- end col-lg-3 -->
+                <div class="col-lg-3 responsive-column">
+                    <div class="footer-item">
+                        <h4 class="title curve-shape pb-3 margin-bottom-20px" data-text="curvs">Quick Links</h4>
+                        <ul class="list-items list--items">
+                            <li><a href="viewuserhome.jsf">Home</a></li>
+                            <li><a href="viewuserfaq.jfs">FAQ</a></li>
+<!--                            <li><a href="viewusertestimonial.xhtml">Testimonial</a></li>-->
+
+                        </ul>
+                    </div><!-- end footer-item -->
+                </div><!-- end col-lg-3 -->
+                <div class="col-lg-3 responsive-column">
+                    <div class="footer-item">
+                        <h4 class="title curve-shape pb-3 margin-bottom-20px" data-text="curvs">Company</h4>
+                        <ul class="list-items list--items">
+                            <li><a href="viewaboutus.jsf">About us</a></li>
+                            <li><a href="viewuserterms.jsf">Terms</a></li>
+                            <li><a href="addusercontactus.jsf">Contact us</a></li>
+
+                        </ul>
+                    </div><!-- end footer-item -->
+                </div><!-- end col-lg-3 -->
+
+                <div class="col-lg-3 responsive-column">
+                    <div class="footer-item">
+                        <h4 class="title curve-shape pb-3 margin-bottom-20px" data-text="curvs">Payment Methods</h4>
+                        <p class="footer__desc pb-3">Pay any way you choose, we support all payment options.</p>
+                        <img src="../resources/user/assets/images/payment-img.png" alt=""/>
+                    </div><!-- end footer-item -->
+                </div><!-- end col-lg-3 -->
+            </div><!-- end row -->
+            <div class="section-block"></div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copy-right padding-top-30px text-center">
+                        <p class="copy__desc">
+                             Copyright  All rights reserved
+                        </p>
+                    </div><!-- end copy-right -->
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section><!-- end footer-area --> 
+            </ui:insert>
+        </div>
+    </h:body>
+    <script src="../resources/user/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../resources/user/assets/js/jquery-ui.js"></script>
+    <script src="../resources/user/assets/js/popper.min.js"></script>
+    <script src="../resources/user/assets/js/bootstrap.min.js"></script>
+    <script src="../resources/user/assets/js/bootstrap-select.min.js"></script>
+    <script src="../resources/user/assets/js/moment.min.js"></script>
+    <script src="../resources/user/assets/js/daterangepicker.js"></script>
+    <script src="../resources/user/assets/js/owl.carousel.min.js"></script>
+    <script src="../resources/user/assets/js/jquery.fancybox.min.js"></script>
+    <script src="../resources/user/assets/js/jquery.countTo.min.js"></script>
+    <script src="../resources/user/assets/js/animated-headline.js"></script>
+    <script src="../resources/user/assets/js/jquery.ripples-min.js"></script>
+    <script src="../resources/user/assets/js/quantity-input.js"></script>
+    <script src="../resources/user/assets/js/jquery.superslides.min.js"></script>
+    <script src="../resources/user/assets/js/superslider-script.js"></script>
+    <script src="../resources/user/assets/js/main.js"></script>
+</html>
+

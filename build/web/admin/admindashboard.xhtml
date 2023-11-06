@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="AdminLayout.xhtml">
+            <ui:define name="content">
+                 <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-end">
+<!--                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Unikit</a>
+                                        </li>end nav-item
+                                        <li class="breadcrumb-item"><a href="#">Dashboard</a>
+                                        </li>end nav-item
+                                        <li class="breadcrumb-item active">Analytics</li>
+                                    </ol>-->
+                                </div>
+                                 
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div>
+               
+    <div class="col-12 col-xl-12 stretch-card">
+        <div class="row flex-grow">
+            <div class="col-md-3 grid-margin stretch-card">
+                <div class="card" style="background-color: #f00060; color: white;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <h6 class="card-title mb-0" style="color:white;">Total Staff</h6>
+                            <div class="dropdown mb-2">
+                                <button class="btn p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+
+                            </div>
+                        </div>
+                       
+                        
+                            <div class="row">
+                                <div class="col-6 col-md-12 col-xl-5">
+                                    <h3 class="mb-2" style="color:white;">
+                                   #{teamJSFManagedBean.showteam().size()}
+                                    </h3>
+                                </div>
+                                <div class="col-6 col-md-12 col-xl-7">
+                                    <div id="" class=""></div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 grid-margin stretch-card">
+                <div class="card" style="background-color:#008000; color:white;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <h6 class="card-title mb-0" style="color:white">Total Bookings</h6>
+                            <div class="dropdown mb-2">
+                                <button class="btn p-0" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+
+                            </div>
+                        </div>
+                       
+                       
+                            <div class="row">
+                                <div class="col-6 col-md-12 col-xl-5">
+                                    <h3 class="mb-2"  style="color:white;">
+                                   #{bookingJSFManagedBean.showBookings().size()}
+                                    </h3>
+                                </div>
+                                <div class="col-6 col-md-12 col-xl-7">
+                                    <div id="" class=""></div>
+                                </div>
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 grid-margin stretch-card">
+                <div class="card" style="background-color:#f00060; color:white;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <h6 class="card-title mb-0" style="color:white;">Total Cars </h6>
+                            <div class="dropdown mb-2">
+                                <button class="btn p-0" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+
+                            </div>
+                        </div>
+                        
+                            <div class="row">
+                                <div class="col-6 col-md-12 col-xl-5">
+                                    <h3 class="mb-2"  style="color:white;">
+                                           #{carsJSFManagedBean.showcars().size()}                                  
+                                    </h3>
+
+                                </div>
+                                <div class="col-6 col-md-12 col-xl-7">
+                                    <div id="" class=""></div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 grid-margin stretch-card">
+                <div class="card" style="background-color:#008000; color:white;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <h6 class="card-title mb-0" style="color:white;">Total Packages</h6>
+                            <div class="dropdown mb-2">
+                                <button class="btn p-0" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+
+                            </div>
+                        </div>
+                        
+                            <div class="row">
+                                <div class="col-6 col-md-12 col-xl-5">
+                                    <h3 class="mb-2"  style="color:white;">
+                                            #{carpackageJSFManagedBean.showcarpackage().size()}                                
+                                    </h3>
+
+                                </div>
+                                <div class="col-6 col-md-12 col-xl-7">
+                                    <div id="" class=""></div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container-fluid">                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="float-end">
+                                <ol class="breadcrumb">
+                                    <li class=""><a href="#"></a></li>
+                                    <li class=""><a href="#"></a></li>
+                                    <li class=""></li>
+                                </ol>
+                            </div>
+                            
+                        </div>
+                        <!--end page-title-box-->
+                    </div>
+                    <!--end col-->
+                </div>
+                <!-- end page title end breadcrumb -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <h4 class="card-title">Car Booking Details</h4>
+                                    </div>
+                                    <div class="col-2">
+<!--                                        <a href="addport.xhtml" class="btn btn-dark">Add Port</a>-->
+                                    </div>                                    
+                                </div>
+                                
+
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                    <div class="table-responsive">
+<!--                        <h:form>-->
+      <h:dataTable class="table" id="datatable_1" value="#{bookingJSFManagedBean.showBookings()}" var="t">
+    
+                            <h:column>
+                                <f:facet name="header" class="thead-light">
+                                  Sr.No.
+                                </f:facet>
+                                 
+                                #{bookingJSFManagedBean.showBookings().indexOf(t)+1}
+                            </h:column>
+    
+                            <h:column>
+                                <f:facet name="header" class="thead-light">
+                                   Booking ID
+                                </f:facet>
+                                #{t.bid}
+                               
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" class="thead-light">
+                                   BookDate
+                                </f:facet>
+                                <h:outputText value="#{t.bookDate}">
+                                            <f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
+                                        </h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" class="thead-light">
+                                    User Details
+                                </f:facet>
+                                #{t.fname} #{t.lname} <br/>
+                                #{t.PAddress1} <br/>
+                                #{t.PAddress2} <br/>
+                                #{t.city} - #{t.pcode} - #{t.state} <br/>
+                                #{t.email}
+                                 
+                            </h:column>
+                                <h:column>
+                                <f:facet name="header" class="thead-light">
+                                    Booking Details
+                                </f:facet>
+                                    
+                                   
+                                 <h:outputText value="#{t.pickDate}">
+                                            <f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
+                                        </h:outputText> -
+                                        <h:outputText value="#{t.dropDate}">
+                                            <f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
+                                        </h:outputText> <br/>
+                                         #{t.pickTime} - #{t.dropTime}
+                            </h:column>
+    
+                             <h:column>
+                                <f:facet name="header" class="thead-light">
+                                   Car Details
+                                </f:facet>
+                                  #{t.cpid.pname} - #{t.cpid.price}(₹) <br/>
+                                  #{t.cpid.carid.modelname}
+                            </h:column>
+                           
+                        </h:dataTable>
+<!--</h:form>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+                
+            </div>
+                    
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
